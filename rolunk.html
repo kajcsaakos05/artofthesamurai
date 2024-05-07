@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolunk</title>
+    <link href="minden/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;">
+    <div id="main">
+        <div id="menu">
+            <div id="logo">
+                <img src="minden/artofthesamurai.png" alt="A kép nem jeleníthető meg! :(" onclick="facebook()">
+            </div>
+            <div id="alpontok">
+                <div id="home">
+                    <a href="index.html">KEZDŐLAP</a>
+                </div>
+                <div id="rolunk">
+                    <a href="rolunk.html">RÓLUNK</a>
+                </div>
+                <div id="termekek">
+                    <a href="termekek.html">TERMÉKEK</a>
+                </div>
+                <div id="login">
+                    <a href="mainreg.php">
+                        <img src="minden/logout2.png" alt="LOGIN">
+                    </a>
+                </div>
+            </div>
+            <a id="gomb" onclick="alpontok_megjelenitese()">
+                <img src="minden/button2.png" alt="A kép nem jeleníthető meg! :(">
+            </a>
+        </div>
+        <div id="content2">
+            <div id="rolunk_szoveg">
+                <p>
+                    Az "Art Of The Samurai" klub Sepsiszentgyörgy egyik legkedveltebb és legelismertebb harcművészeti központja, 
+                    amelyet Szőke Attilla alapított 2014. február elsején. Ez a klub nem csupán egy egyszerű harcművészeti iskola,
+                    hanem egy olyan közösség is, amely elkötelezett a japán kultúra és harcművészetek népszerűsítése mellett.
+    
+                    Az "Art Of The Samurai" klub a December 1. nevű utcán található, pontosan azon az épületen a 3. emeleten,
+                    ahol a "Dr. Office" bolt üzemel. Ez a helyszín ideális találkozási pontja mindazoknak, akik érdeklődnek a harcművészetek
+                    iránt, legyenek kezdők vagy haladók. A klub kiváló infrastruktúrával és barátságos környezettel rendelkezik,
+                    amely lehetővé teszi mindenki számára, hogy kényelmesen és hatékonyan fejlessze képességeit.
+    
+                    Az "Art Of The Samurai" klub fő fókuszpontja a jiu-jitsu, melyet Szőke Attilla, a klub alapítója és vezetője tanít.
+                    Habár csak egy edző van a klubban, de az ő mesteri vezetése mellett a nagyobb korosztályból azok a tapasztalt diákok
+                    is segítenek, akiknek már komoly tapasztalataik vannak a jiu-jitsu terén. Ez a dinamikus tanulási környezet lehetővé
+                    teszi minden tanulónak, hogy fejlődjön és kiteljesedjen a harcművészetekben.
+    
+                    Az "Art Of The Samurai" klub egy olyan hely, ahol a tradíció és a modernitás találkozik, és ahol mindenki számára
+                    lehetőség nyílik a személyes fejlődésre és a közösséghez való csatlakozásra. Legyen szó akár kezdőkről, akár haladókról,
+                    ez a klub mindenkinek otthont ad, aki szeretne részt venni egy inspiráló és elkötelezett közösségben, ahol a harcművészetek
+                    és a japán kultúra tisztelete mindennapi gyakorlat.
+                </p>
+            </div>
+
+            <div id="keptarolo">
+                <div id="kepvalaszto">
+                    <img src="rolunkkepek/1.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/2.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/3.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/4.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/5.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/6.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/7.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/8.jpg" alt="Kép" class="kepek">
+                    <img src="rolunkkepek/9.jpg" alt="Kép" class="kepek">
+
+                </div>
+                <button id="elozogomb" class="kepgomb" onclick="elozo_kep()">&#10094;</button>
+                <button id="kovigomb" class="kepgomb" onclick="kovi_kep()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    let aktualis_index = 0;
+    let kepek = document.querySelectorAll('.kepek');
+
+    function kep_mutato(index){
+        let kep_elhuzo = document.getElementById('kepvalaszto');
+        let kep_szelesseg = kepek[0].clientWidth;
+        kep_elhuzo.style.transform = `translateX(-${index * kep_szelesseg}px)`;
+        aktualis_index = index;
+    }
+
+    function kovi_kep(){
+        if(aktualis_index < kepek.length - 1){
+            aktualis_index++;
+            kep_mutato(aktualis_index);
+        }
+    }
+
+    function elozo_kep(){
+        if(aktualis_index > 0){
+            aktualis_index--;
+            kep_mutato(aktualis_index);
+        }
+    }
+</script>
+</body>
+</html>

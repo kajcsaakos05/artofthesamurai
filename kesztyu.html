@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesztyű</title>
+    <link href="minden/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;">
+    <div id="main">
+        <div id="menu">
+            <div id="logo">
+                <img src="minden/artofthesamurai.png" alt="A kép nem jeleníthető meg! :(" onclick="facebook()">
+            </div>
+            <div id="alpontok">
+                <div id="home">
+                    <a href="index.html">KEZDŐLAP</a>
+                </div>
+                <div id="rolunk">
+                    <a href="rolunk.html">RÓLUNK</a>
+                </div>
+                <div id="termekek">
+                    <a href="termekek.html">TERMÉKEK</a>
+                </div>
+                <div id="login">
+                    <a href="mainreg.php">
+                        <img src="minden/logout2.png" alt="LOGIN">
+                    </a>
+                </div>
+            </div>
+            <a id="gomb" onclick="alpontok_megjelenitese()">
+                <img src="minden/button2.png" alt="A kép nem jeleníthető meg! :(">
+            </a>
+        </div>
+        <div id="prevasarlas">
+            <div id="ruha-nagy">
+                <img src="kesztyu/feher.png" alt="" id="chosen-pic">
+            </div>
+            <div id="vasarlas">
+                <div id="choice">
+                    <div id="szindiv">
+                        <label for="">Válasszon egy színt</label>
+                        <select id="szin-valaszto">
+                            <option value="feher">Fehér</option>
+                            <option value="piros">Piros</option>
+                            <option value="kek">Kék</option>
+                        </select>
+                    </div>
+
+                    <div id="meretdiv">
+                        <label for="">Válasszon egy méretet</label>
+                        <select id="meret-valaszto">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+                    <div id="vegar">
+                        <i>79.99 lej/17.99 usd/15.99 euro</i>
+                    </div>
+
+                    <button id="purchase" onclick="vasarlas_sikeres()">Vásárlás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var szinOpcio = document.getElementById("szin-valaszto");
+    var kepSzin = document.getElementById("ruha-nagy");
+
+    szinOpcio.addEventListener('change', function(){
+        var valasztottSzin = szinOpcio.value;
+        kepSzin.innerHTML = '';
+        var kep = new Image();
+        kep.src = 'kesztyu/' + valasztottSzin + '.png';
+        kepSzin.appendChild(kep);
+    });
+
+    function vasarlas_sikeres()
+    {
+    let szin = document.getElementById("szin-valaszto").value;
+    let meret = document.getElementById("meret-valaszto").value;
+    alert(`Ön egy ${szin} színű ${meret} méretű kesztyűt vásárolt!`)
+    window.location.href = "termekek.html";
+    }
+</script>
+
+</body>
+</html>

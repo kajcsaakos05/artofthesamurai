@@ -1,0 +1,567 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: rgb(5, 1, 31);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(5, 1, 31);
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    background-color: rgb(5, 71, 112);
+    margin-top: 0;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 91%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(5, 1, 31);
+}
+
+#bal{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 45%;
+}
+
+#jobb{
+    display: flex;
+    width: 45%;
+    height: 80%;
+}
+
+#alpontok{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    justify-content: right;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo img, #login img{
+    height: 90%;
+    width: 100%;
+}
+
+#logo{
+    margin-top: 5px;
+}
+
+#login{
+    width: 50px;
+    margin-left: 70px;
+}
+
+#home, #rolunk, #termekek, #event{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+#jobb img{
+    height: 100%;
+}
+
+#jobb, #bal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cim{
+    height: 20%;
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#szoveg{
+    height: 100%;
+    width: 80%;
+    padding: 5px;
+    color: white;
+    box-shadow: rgba(53, 25, 130, 0.2) 0px 8px 24px;
+    border-radius: 5%;
+}
+
+p{
+    text-align: justify;
+    font-family: cursive;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+#gomb{
+    display: none;
+}
+
+#home:hover{
+    background-color: rgba(0,0,0, 0.2);
+}
+
+#rolunk:hover{
+    background-color: rgba(0,0,0, 0.2);
+}
+
+#termekek:hover{
+    background-color: rgba(0,0,0, 0.2);
+}
+
+#event:hover{
+    background-color: rgba(0,0,0, 0.2);
+}
+
+@media (width<1000px){
+    #content{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    #jobb, #bal{
+        width: 99%;
+    }
+    #jobb{
+        margin-top: 25px;
+        height: 50%;
+    }
+    #bal{
+        height: 100%;
+    }
+    #szoveg{
+        height: 100%;
+    }
+    #cim h1{
+        margin-top: 20px;
+    }
+}
+
+@media (width<=750px){
+    #alpontok{
+        display: none;
+    }
+    #gomb, #gomb img{
+        display: flex;
+        height: 70%;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    #gomb{
+        height: 100%;
+    }
+    #menu{
+        justify-content: space-between;
+    }
+    #gomb:hover{
+        cursor: pointer;
+        background-color: rgba(0,0,0, 0.2);
+    }
+    #home, #rolunk, #termekek, #event{
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+    }
+    #login{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:10px;
+    }
+}
+
+/* Ez mar a termekes css */
+
+#osszes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1200px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(5, 1, 31);
+}
+
+#ruhak{
+    height: 720px;
+    width: 90%;
+    background-color: rgb(5, 1, 31);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+}
+
+#also, #felso{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#other{
+    height: 300px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(5, 1, 31);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+.clothes{
+    width: 25%;
+    height: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+.clothes a, .clothes a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.clothes a img { 
+	transition: all .2s ease-in-out; 
+}
+.clothes a img:hover { 
+    	transform: scale(1.05); 
+}
+
+#hello div,h2{
+    color: white;
+    font-weight: 100;
+    font-family: cursive;
+    font-size: 25pt;
+}
+
+#hello div{
+    margin-top: 10px;
+}
+
+#hello{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (width<=550px) and (width>0px){
+    #osszes{
+        height: 5000px;
+    }
+    #ruhak{
+        height: 65%;
+        width: 95%;
+    }
+    #also, #felso{
+        flex-direction: column;
+    }
+    #other{
+        width: 95%;
+        flex-direction: column;
+        height: 1000px;
+    }
+    .clothes{
+        width: 90%;
+        height: 30%;
+    }
+}
+
+@media (width<=1200px) and (width>1000px){
+    .clothes{
+        height: 70%;
+    }
+}
+
+@media (width<=1000px) and (width>800px){
+    .clothes{
+        height: 60%;
+    }
+}
+
+@media (width<=800px) and (width>600px){
+    .clothes{
+        height: 50%;
+    }
+}
+
+@media (width<=600px) and (width>550px){
+    .clothes{
+        height: 45%;
+    }
+}
+
+/* Ez mar a termeken beluli kimono css */
+
+#prevasarlas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 91%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(5, 1, 31);
+
+}
+
+#ruha-nagy{
+    width: 35%;
+    height: 85%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+#vasarlas{
+    width: 35%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+#choice{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(5, 71, 112);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+#ruha-nagy img{
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+#choice select{
+    width: 60%;
+    height: 100%;
+    border: none;
+    background-color:rgb(5, 1, 31);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#choice select:hover{
+    cursor: pointer;
+}
+
+#szindiv, #meretdiv, #nemdiv{
+    width: 50%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#choice select:hover{
+    background-color:rgb(35, 35, 35);
+}
+
+#purchase{
+    width: 30%;
+    height: 10%;
+    border: none;
+    background-color:rgb(5, 1, 31);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#purchase:hover{
+    background-color:rgb(35, 35, 35);
+    cursor: pointer;
+}
+
+#choice label{
+    color:rgb(5, 1, 31);
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#vegar{
+    color:rgb(195, 195, 195);
+    font-family: cursive;
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+@media (width<=700px){
+    #szindiv, #meretdiv, #nemdiv{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    #choice select{
+        width: 99%;
+    }
+    #purchase{
+        width: 60%;
+    }
+    #prevasarlas{
+        flex-direction: column;
+    }
+    #ruha-nagy{
+        width: 80%;
+        height: 60%;
+        margin-bottom: 5px;
+    }
+    #vasarlas{
+        width: 70%;
+    }
+}
+
+@media (width<=1000px) and (width>700px){
+    #ruha-nagy{
+        width: 50%;
+    }
+    #vasarlas{
+        width: 40%;
+    }
+    #szindiv, #meretdiv, #nemdiv{
+        width: 100%;
+    }
+}
+
+#rolunk_szoveg{
+    width: 80%;
+    padding: 5px;
+    color: white;
+    box-shadow: rgba(53, 25, 130, 0.2) 0px 8px 24px;
+    border-radius: 2%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#keptarolo{
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#kepvalaszto{
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.kepek{
+    flex: 0 0 auto;
+    width: 800px;
+    height: 500px;   
+    border-radius: 10px;
+}
+
+.kepgomb{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#elozogomb{
+    left: 0;
+}
+
+#kovigomb{
+    right: 0;
+}
+
+#content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (width<=1000px) and (width>750px){
+    #keptarolo{
+        width: 600px;
+        height: 400px;
+    }
+    .kepek{
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media (width<750px){
+    #keptarolo{
+        width: 400px;
+        height: 300px;
+    }
+    .kepek{
+        width: 400px;
+        height: 300px;
+    }
+}
